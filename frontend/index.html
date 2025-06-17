@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ratings & Reviews System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Products List</h1>
+  <div id="products"></div>
+
+  <h2>Add Review</h2>
+  <form id="reviewForm" autocomplete="off">
+    <div class="form-row">
+      <label for="user_id">User:</label>
+      <select id="user_id" required></select>
+    </div>
+    <div class="form-row">
+      <label for="product_id">Product:</label>
+      <select id="product_id" required></select>
+    </div>
+    <div class="form-row">
+      <label for="rating">Rating (1-5):</label>
+      <input type="number" id="rating" min="1" max="5" placeholder="Rate out of 5"/>
+    </div>
+    <div class="form-row">
+      <label for="review_text">Review Text:</label>
+      <textarea id="review_text" rows="4" placeholder="Write your review..." style="resize: vertical; min-height: 70px;"></textarea>
+    </div>
+    <div class="form-row">
+      <label for="photo">Photo:</label>
+      <input type="file" id="photo" accept="image/*" />
+    </div>
+    <img id="photoPreview" style="display:none; max-width:120px; margin-bottom:10px; border-radius:7px;"/>
+    <button type="submit">Submit Review</button>
+  </form>
+  <div id="reviewMessage"></div>
+
+  <h2>All Reviews</h2>
+  <div id="reviews"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
